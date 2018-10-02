@@ -1,0 +1,14 @@
+//
+// Created by danie on 2018-10-01.
+//
+
+#ifndef GOOGLEPAGERANKALGORITHM_MATRIX_HPP
+#define GOOGLEPAGERANKALGORITHM_MATRIX_HPP
+
+
+class matrix {
+
+};
+
+
+#endif //GOOGLEPAGERANKALGORITHM_MATRIX_HPP
