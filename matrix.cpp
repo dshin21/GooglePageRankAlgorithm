@@ -3,7 +3,7 @@
 //
 
 #include "matrix.hpp"
-#include <math.h>
+#include <cmath>
 
 matrix::matrix() : row( 1 ), col( 1 ), MATRIX( new double[row * col] ) {
     MATRIX[ 0 ] = 0.0;
@@ -24,7 +24,7 @@ matrix::matrix( int r, int c ) : row( r ), col( c ) {
 }
 
 matrix::matrix( double *double_arr, int size ) {
-    int sqrt_size = static_cast<int>(sqrt( size ));
+    auto sqrt_size = static_cast<int>(sqrt( size ));
     if ( pow( size, 2 ) != sqrt_size ) throw; //TODO: implement an exception
 
     row = sqrt_size;
@@ -53,35 +53,102 @@ void matrix::clear() {
         MATRIX[ i ] = 0.0;
 }
 
-ostream &operator<<( ostream &os, const matrix &matrix ) {
-    for ( int r = 0; r < matrix.row; ++r ) {
-        for ( int c = 0; c < matrix.col; ++c )
-            os << matrix.get_value( r, c );
-        os << "\n";
+ostream &matrix::operator<<( ostream &os ) {
+    for ( int i = 0; i < row; ++i ) {
+        os << MATRIX[ i ];
+        if ( i % row == 0 ) os << "\n";
     }
     return os;
 }
 
-bool operator==( const matrix &first, const matrix &second ) {
-    if ( first.row != second.row || first.col != second.col ) return false;
+bool matrix::operator==( const matrix &matrix ) {
+    if ( row != matrix.row || col != matrix.col ) return false;
 
-    for ( int i = 0; i < first.row; ++i )
-        for ( int j = 0; j < first.col; ++j )
-            if ( abs( first.get_value( i, j ) - second.get_value( i, j )) > matrix::TOLERANCE )
-                return false;
+    for ( int i = 0; i < row; ++i )
+        if ( abs( MATRIX[ i ] - matrix.MATRIX[ i ] ) > TOLERANCE )
+            return false;
     return true;
 }
 
-bool operator!=( const matrix &first, const matrix &second ) {
-    if ( first.row != second.row || first.col != second.col ) return false;
+bool matrix::operator!=( const matrix &matrix ) {
+    if ( row != matrix.row || col != matrix.col ) return false;
 
-    for ( int i = 0; i < first.row; ++i )
-        for ( int j = 0; j < first.col; ++j )
-            if ( abs( first.get_value( i, j ) - second.get_value( i, j )) <= matrix::TOLERANCE )
-                return false;
+    for ( int i = 0; i < row; ++i )
+        if ( abs( MATRIX[ i ] - matrix.MATRIX[ i ] ) < TOLERANCE )
+            return false;
     return true;
 }
 
+matrix &matrix::operator++() {
+    for ( int i = 0; i < row * col; ++i )
+        MATRIX[ i ]++;
+    return reinterpret_cast<matrix &>(MATRIX);
+}
 
+const matrix matrix::operator++( int ) {
+    for ( int i = 0; i < row * col; ++i )
+        ++MATRIX[ i ];
+    return reinterpret_cast<matrix &>(MATRIX);
+}
 
+matrix &matrix::operator--() {
+    for ( int i = 0; i < row * col; ++i )
+        MATRIX[ i ]--;
+    return reinterpret_cast<matrix &>(MATRIX);
+}
 
+const matrix matrix::operator--( int ) {
+    for ( int i = 0; i < row * col; ++i )
+        --MATRIX[ i ];
+    return reinterpret_cast<matrix &>(MATRIX);
+}
+
+matrix &matrix::operator=( matrix &matrix ) {
+    std::swap( row, matrix.row );
+    std::swap( col, matrix.col );
+    std::swap( MATRIX, matrix.MATRIX );
+    return *this;
+}
+
+matrix matrix::operator+( matrix &other_matrix ) {
+    if ( row != other_matrix.row || col != other_matrix.col ) throw; //TODO: implement an exception
+    matrix sum_matrix( row, col );
+    for ( int i = 0; i < row; ++i )
+        sum_matrix.MATRIX[ i ] += MATRIX[ i ] + other_matrix.MATRIX[ i ];
+    return sum_matrix;
+}
+
+matrix &matrix::operator+=( matrix &other_matrix ) {
+    if ( row != other_matrix.row || col != other_matrix.col ) throw; //TODO: implement an exception
+    for ( int i = 0; i < row; ++i )
+        MATRIX[ i ] += other_matrix.MATRIX[ i ];
+    return reinterpret_cast<matrix &>(MATRIX);
+}
+
+matrix matrix::operator-( matrix &other_matrix ) {
+    if ( row != other_matrix.row || col != other_matrix.col ) throw; //TODO: implement an exception
+    matrix diff_matrix( row, col );
+    for ( int i = 0; i < row; ++i )
+        diff_matrix.MATRIX[ i ] -= MATRIX[ i ] + other_matrix.MATRIX[ i ];
+    return diff_matrix;
+}
+
+matrix &matrix::operator-=( matrix &other_matrix ) {
+    if ( row != other_matrix.row || col != other_matrix.col ) throw; //TODO: implement an exception
+    for ( int i = 0; i < row; ++i )
+        MATRIX[ i ] -= other_matrix.MATRIX[ i ];
+    return reinterpret_cast<matrix &>(MATRIX);
+}
+
+//TODO: ask if we need to account for multiplying by a constant
+matrix matrix::operator*( matrix &other_matrix ) {
+    if ( col != other_matrix.row ) throw; //TODO: implement an exception
+    matrix prod_matrix( row, col );
+    //TODO: matrix mult. logic
+    return prod_matrix;
+}
+
+//TODO: ask if we need to account for multiplying by a constant
+matrix &matrix::operator*=( matrix &other_matrix ) {
+    return <#initializer#>;
+}

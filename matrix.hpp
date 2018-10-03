@@ -11,6 +11,9 @@ using namespace std;
 
 class matrix {
 public:
+    double *MATRIX;
+    int row;
+    int col;
     static constexpr double TOLERANCE = 0.001;
 
     matrix();
@@ -29,17 +32,35 @@ public:
 
     void clear();
 
-    friend ostream &operator<<( ostream &os, const matrix &matrix );
+    ostream &operator<<( ostream &os );
 
-    friend bool operator==( const matrix &first, const matrix &second );
+    bool operator==( const matrix &matrix );
 
-    friend bool operator!=( const matrix &first, const matrix &second );
+    bool operator!=( const matrix &matrix );
 
+    matrix &operator++();
+
+    const matrix operator++( int );
+
+    matrix &operator--();
+
+    const matrix operator--( int );
+
+    matrix &operator=( matrix &matrix );
+
+    matrix operator+(matrix &other_matrix );
+
+    matrix &operator+=( matrix &other_matrix );
+
+    matrix operator-(matrix &other_matrix );
+
+    matrix &operator-=( matrix &other_matrix );
+
+    matrix operator*(matrix &other_matrix );
+
+    matrix &operator*=( matrix &other_matrix );
 
 private:
-    double *MATRIX;
-    int row;
-    int col;
 
 
 };
