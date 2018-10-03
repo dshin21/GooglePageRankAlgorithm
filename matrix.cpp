@@ -23,7 +23,7 @@ matrix::matrix( int r, int c ) : row( r ), col( c ) {
     for ( int i = 0; i < r * c; ++i ) MATRIX[ i ] = 0.0;
 }
 
-matrix::matrix( double *doublearr, int size ) {
+matrix::matrix( double *double_arr, int size ) {
     int sqrt_size = static_cast<int>(sqrt( size ));
     if ( pow( size, 2 ) != sqrt_size ) throw; //TODO: implement an exception
 
@@ -31,7 +31,11 @@ matrix::matrix( double *doublearr, int size ) {
     col = sqrt_size;
     MATRIX = new double[size];
 
-    for ( int i = 0; i < size; ++i ) MATRIX[ i ] = doublearr[ i ];
+    for ( int i = 0; i < size; ++i ) MATRIX[ i ] = double_arr[ i ];
+}
+
+matrix::~matrix() {
+    delete[] MATRIX;
 }
 
 void matrix::set_value( int r, int c, double newValue ) {
@@ -39,7 +43,7 @@ void matrix::set_value( int r, int c, double newValue ) {
     MATRIX[ ( row * r ) + c ] = newValue;
 }
 
-double matrix::get_value( int r, int c ) {
+double matrix::get_value( int r, int c ) const {
     if ( r < 0 || c < 0 || ( r * c > row * col )) throw;
     return MATRIX[ ( row * r ) + c ];
 }
@@ -49,8 +53,35 @@ void matrix::clear() {
         MATRIX[ i ] = 0.0;
 }
 
-matrix::~matrix() {
-    delete[] MATRIX;
+ostream &operator<<( ostream &os, const matrix &matrix ) {
+    for ( int r = 0; r < matrix.row; ++r ) {
+        for ( int c = 0; c < matrix.col; ++c )
+            os << matrix.get_value( r, c );
+        os << "\n";
+    }
+    return os;
 }
+
+bool operator==( const matrix &first, const matrix &second ) {
+    if ( first.row != second.row || first.col != second.col ) return false;
+
+    for ( int i = 0; i < first.row; ++i )
+        for ( int j = 0; j < first.col; ++j )
+            if ( abs( first.get_value( i, j ) - second.get_value( i, j )) > matrix::TOLERANCE )
+                return false;
+    return true;
+}
+
+bool operator!=( const matrix &first, const matrix &second ) {
+    if ( first.row != second.row || first.col != second.col ) return false;
+
+    for ( int i = 0; i < first.row; ++i )
+        for ( int j = 0; j < first.col; ++j )
+            if ( abs( first.get_value( i, j ) - second.get_value( i, j )) <= matrix::TOLERANCE )
+                return false;
+    return true;
+}
+
+
 
 
