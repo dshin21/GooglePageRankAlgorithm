@@ -13,9 +13,9 @@ using namespace std;
 
 class matrix {
 public:
-    double *MATRIX;
+    double *the_matrix;
     int row, col;
-    static constexpr double TOLERANCE = 0.001;
+    static constexpr double tolerance = 0.001;
 
     matrix();
 

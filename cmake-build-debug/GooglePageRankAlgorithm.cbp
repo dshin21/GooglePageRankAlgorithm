@@ -80,6 +80,27 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/column_matrix.cpp">
+			<Option target="GooglePageRankAlgorithm"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/column_matrix.hpp">
+			<Option target="GooglePageRankAlgorithm"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/connectivity_matrix.cpp">
+			<Option target="GooglePageRankAlgorithm"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/connectivity_matrix.hpp">
+			<Option target="GooglePageRankAlgorithm"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/importance_matrix.cpp">
+			<Option target="GooglePageRankAlgorithm"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/importance_matrix.hpp">
+			<Option target="GooglePageRankAlgorithm"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/invalid_connectivity_matrix_exception.hpp">
+			<Option target="GooglePageRankAlgorithm"/>
+		</Unit>
 		<Unit filename="/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/main.cpp">
 			<Option target="GooglePageRankAlgorithm"/>
 		</Unit>
@@ -87,6 +108,24 @@
 			<Option target="GooglePageRankAlgorithm"/>
 		</Unit>
 		<Unit filename="/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/matrix.hpp">
+			<Option target="GooglePageRankAlgorithm"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/q_matrix.cpp">
+			<Option target="GooglePageRankAlgorithm"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/q_matrix.hpp">
+			<Option target="GooglePageRankAlgorithm"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/stochastic_matrix.cpp">
+			<Option target="GooglePageRankAlgorithm"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/stochastic_matrix.hpp">
+			<Option target="GooglePageRankAlgorithm"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/transition_matrix.cpp">
+			<Option target="GooglePageRankAlgorithm"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/transition_matrix.hpp">
 			<Option target="GooglePageRankAlgorithm"/>
 		</Unit>
 		<Unit filename="/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/CMakeLists.txt">

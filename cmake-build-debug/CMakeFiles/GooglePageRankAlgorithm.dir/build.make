@@ -83,19 +83,109 @@ CMakeFiles/GooglePageRankAlgorithm.dir/matrix.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GooglePageRankAlgorithm.dir/matrix.cpp.s"
 	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/matrix.cpp -o CMakeFiles/GooglePageRankAlgorithm.dir/matrix.cpp.s
 
+CMakeFiles/GooglePageRankAlgorithm.dir/connectivity_matrix.cpp.o: CMakeFiles/GooglePageRankAlgorithm.dir/flags.make
+CMakeFiles/GooglePageRankAlgorithm.dir/connectivity_matrix.cpp.o: ../connectivity_matrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GooglePageRankAlgorithm.dir/connectivity_matrix.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GooglePageRankAlgorithm.dir/connectivity_matrix.cpp.o -c /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/connectivity_matrix.cpp
+
+CMakeFiles/GooglePageRankAlgorithm.dir/connectivity_matrix.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GooglePageRankAlgorithm.dir/connectivity_matrix.cpp.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/connectivity_matrix.cpp > CMakeFiles/GooglePageRankAlgorithm.dir/connectivity_matrix.cpp.i
+
+CMakeFiles/GooglePageRankAlgorithm.dir/connectivity_matrix.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GooglePageRankAlgorithm.dir/connectivity_matrix.cpp.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/connectivity_matrix.cpp -o CMakeFiles/GooglePageRankAlgorithm.dir/connectivity_matrix.cpp.s
+
+CMakeFiles/GooglePageRankAlgorithm.dir/stochastic_matrix.cpp.o: CMakeFiles/GooglePageRankAlgorithm.dir/flags.make
+CMakeFiles/GooglePageRankAlgorithm.dir/stochastic_matrix.cpp.o: ../stochastic_matrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GooglePageRankAlgorithm.dir/stochastic_matrix.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GooglePageRankAlgorithm.dir/stochastic_matrix.cpp.o -c /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/stochastic_matrix.cpp
+
+CMakeFiles/GooglePageRankAlgorithm.dir/stochastic_matrix.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GooglePageRankAlgorithm.dir/stochastic_matrix.cpp.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/stochastic_matrix.cpp > CMakeFiles/GooglePageRankAlgorithm.dir/stochastic_matrix.cpp.i
+
+CMakeFiles/GooglePageRankAlgorithm.dir/stochastic_matrix.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GooglePageRankAlgorithm.dir/stochastic_matrix.cpp.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/stochastic_matrix.cpp -o CMakeFiles/GooglePageRankAlgorithm.dir/stochastic_matrix.cpp.s
+
+CMakeFiles/GooglePageRankAlgorithm.dir/importance_matrix.cpp.o: CMakeFiles/GooglePageRankAlgorithm.dir/flags.make
+CMakeFiles/GooglePageRankAlgorithm.dir/importance_matrix.cpp.o: ../importance_matrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GooglePageRankAlgorithm.dir/importance_matrix.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GooglePageRankAlgorithm.dir/importance_matrix.cpp.o -c /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/importance_matrix.cpp
+
+CMakeFiles/GooglePageRankAlgorithm.dir/importance_matrix.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GooglePageRankAlgorithm.dir/importance_matrix.cpp.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/importance_matrix.cpp > CMakeFiles/GooglePageRankAlgorithm.dir/importance_matrix.cpp.i
+
+CMakeFiles/GooglePageRankAlgorithm.dir/importance_matrix.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GooglePageRankAlgorithm.dir/importance_matrix.cpp.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/importance_matrix.cpp -o CMakeFiles/GooglePageRankAlgorithm.dir/importance_matrix.cpp.s
+
+CMakeFiles/GooglePageRankAlgorithm.dir/transition_matrix.cpp.o: CMakeFiles/GooglePageRankAlgorithm.dir/flags.make
+CMakeFiles/GooglePageRankAlgorithm.dir/transition_matrix.cpp.o: ../transition_matrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GooglePageRankAlgorithm.dir/transition_matrix.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GooglePageRankAlgorithm.dir/transition_matrix.cpp.o -c /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/transition_matrix.cpp
+
+CMakeFiles/GooglePageRankAlgorithm.dir/transition_matrix.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GooglePageRankAlgorithm.dir/transition_matrix.cpp.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/transition_matrix.cpp > CMakeFiles/GooglePageRankAlgorithm.dir/transition_matrix.cpp.i
+
+CMakeFiles/GooglePageRankAlgorithm.dir/transition_matrix.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GooglePageRankAlgorithm.dir/transition_matrix.cpp.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/transition_matrix.cpp -o CMakeFiles/GooglePageRankAlgorithm.dir/transition_matrix.cpp.s
+
+CMakeFiles/GooglePageRankAlgorithm.dir/q_matrix.cpp.o: CMakeFiles/GooglePageRankAlgorithm.dir/flags.make
+CMakeFiles/GooglePageRankAlgorithm.dir/q_matrix.cpp.o: ../q_matrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GooglePageRankAlgorithm.dir/q_matrix.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GooglePageRankAlgorithm.dir/q_matrix.cpp.o -c /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/q_matrix.cpp
+
+CMakeFiles/GooglePageRankAlgorithm.dir/q_matrix.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GooglePageRankAlgorithm.dir/q_matrix.cpp.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/q_matrix.cpp > CMakeFiles/GooglePageRankAlgorithm.dir/q_matrix.cpp.i
+
+CMakeFiles/GooglePageRankAlgorithm.dir/q_matrix.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GooglePageRankAlgorithm.dir/q_matrix.cpp.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/q_matrix.cpp -o CMakeFiles/GooglePageRankAlgorithm.dir/q_matrix.cpp.s
+
+CMakeFiles/GooglePageRankAlgorithm.dir/column_matrix.cpp.o: CMakeFiles/GooglePageRankAlgorithm.dir/flags.make
+CMakeFiles/GooglePageRankAlgorithm.dir/column_matrix.cpp.o: ../column_matrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/GooglePageRankAlgorithm.dir/column_matrix.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GooglePageRankAlgorithm.dir/column_matrix.cpp.o -c /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/column_matrix.cpp
+
+CMakeFiles/GooglePageRankAlgorithm.dir/column_matrix.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GooglePageRankAlgorithm.dir/column_matrix.cpp.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/column_matrix.cpp > CMakeFiles/GooglePageRankAlgorithm.dir/column_matrix.cpp.i
+
+CMakeFiles/GooglePageRankAlgorithm.dir/column_matrix.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GooglePageRankAlgorithm.dir/column_matrix.cpp.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/column_matrix.cpp -o CMakeFiles/GooglePageRankAlgorithm.dir/column_matrix.cpp.s
+
 # Object files for target GooglePageRankAlgorithm
 GooglePageRankAlgorithm_OBJECTS = \
 "CMakeFiles/GooglePageRankAlgorithm.dir/main.cpp.o" \
-"CMakeFiles/GooglePageRankAlgorithm.dir/matrix.cpp.o"
+"CMakeFiles/GooglePageRankAlgorithm.dir/matrix.cpp.o" \
+"CMakeFiles/GooglePageRankAlgorithm.dir/connectivity_matrix.cpp.o" \
+"CMakeFiles/GooglePageRankAlgorithm.dir/stochastic_matrix.cpp.o" \
+"CMakeFiles/GooglePageRankAlgorithm.dir/importance_matrix.cpp.o" \
+"CMakeFiles/GooglePageRankAlgorithm.dir/transition_matrix.cpp.o" \
+"CMakeFiles/GooglePageRankAlgorithm.dir/q_matrix.cpp.o" \
+"CMakeFiles/GooglePageRankAlgorithm.dir/column_matrix.cpp.o"
 
 # External object files for target GooglePageRankAlgorithm
 GooglePageRankAlgorithm_EXTERNAL_OBJECTS =
 
 GooglePageRankAlgorithm.exe: CMakeFiles/GooglePageRankAlgorithm.dir/main.cpp.o
 GooglePageRankAlgorithm.exe: CMakeFiles/GooglePageRankAlgorithm.dir/matrix.cpp.o
+GooglePageRankAlgorithm.exe: CMakeFiles/GooglePageRankAlgorithm.dir/connectivity_matrix.cpp.o
+GooglePageRankAlgorithm.exe: CMakeFiles/GooglePageRankAlgorithm.dir/stochastic_matrix.cpp.o
+GooglePageRankAlgorithm.exe: CMakeFiles/GooglePageRankAlgorithm.dir/importance_matrix.cpp.o
+GooglePageRankAlgorithm.exe: CMakeFiles/GooglePageRankAlgorithm.dir/transition_matrix.cpp.o
+GooglePageRankAlgorithm.exe: CMakeFiles/GooglePageRankAlgorithm.dir/q_matrix.cpp.o
+GooglePageRankAlgorithm.exe: CMakeFiles/GooglePageRankAlgorithm.dir/column_matrix.cpp.o
 GooglePageRankAlgorithm.exe: CMakeFiles/GooglePageRankAlgorithm.dir/build.make
 GooglePageRankAlgorithm.exe: CMakeFiles/GooglePageRankAlgorithm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable GooglePageRankAlgorithm.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable GooglePageRankAlgorithm.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GooglePageRankAlgorithm.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

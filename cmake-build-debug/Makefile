@@ -123,6 +123,87 @@ GooglePageRankAlgorithm/fast:
 	$(MAKE) -f CMakeFiles/GooglePageRankAlgorithm.dir/build.make CMakeFiles/GooglePageRankAlgorithm.dir/build
 .PHONY : GooglePageRankAlgorithm/fast
 
+column_matrix.o: column_matrix.cpp.o
+
+.PHONY : column_matrix.o
+
+# target to build an object file
+column_matrix.cpp.o:
+	$(MAKE) -f CMakeFiles/GooglePageRankAlgorithm.dir/build.make CMakeFiles/GooglePageRankAlgorithm.dir/column_matrix.cpp.o
+.PHONY : column_matrix.cpp.o
+
+column_matrix.i: column_matrix.cpp.i
+
+.PHONY : column_matrix.i
+
+# target to preprocess a source file
+column_matrix.cpp.i:
+	$(MAKE) -f CMakeFiles/GooglePageRankAlgorithm.dir/build.make CMakeFiles/GooglePageRankAlgorithm.dir/column_matrix.cpp.i
+.PHONY : column_matrix.cpp.i
+
+column_matrix.s: column_matrix.cpp.s
+
+.PHONY : column_matrix.s
+
+# target to generate assembly for a file
+column_matrix.cpp.s:
+	$(MAKE) -f CMakeFiles/GooglePageRankAlgorithm.dir/build.make CMakeFiles/GooglePageRankAlgorithm.dir/column_matrix.cpp.s
+.PHONY : column_matrix.cpp.s
+
+connectivity_matrix.o: connectivity_matrix.cpp.o
+
+.PHONY : connectivity_matrix.o
+
+# target to build an object file
+connectivity_matrix.cpp.o:
+	$(MAKE) -f CMakeFiles/GooglePageRankAlgorithm.dir/build.make CMakeFiles/GooglePageRankAlgorithm.dir/connectivity_matrix.cpp.o
+.PHONY : connectivity_matrix.cpp.o
+
+connectivity_matrix.i: connectivity_matrix.cpp.i
+
+.PHONY : connectivity_matrix.i
+
+# target to preprocess a source file
+connectivity_matrix.cpp.i:
+	$(MAKE) -f CMakeFiles/GooglePageRankAlgorithm.dir/build.make CMakeFiles/GooglePageRankAlgorithm.dir/connectivity_matrix.cpp.i
+.PHONY : connectivity_matrix.cpp.i
+
+connectivity_matrix.s: connectivity_matrix.cpp.s
+
+.PHONY : connectivity_matrix.s
+
+# target to generate assembly for a file
+connectivity_matrix.cpp.s:
+	$(MAKE) -f CMakeFiles/GooglePageRankAlgorithm.dir/build.make CMakeFiles/GooglePageRankAlgorithm.dir/connectivity_matrix.cpp.s
+.PHONY : connectivity_matrix.cpp.s
+
+importance_matrix.o: importance_matrix.cpp.o
+
+.PHONY : importance_matrix.o
+
+# target to build an object file
+importance_matrix.cpp.o:
+	$(MAKE) -f CMakeFiles/GooglePageRankAlgorithm.dir/build.make CMakeFiles/GooglePageRankAlgorithm.dir/importance_matrix.cpp.o
+.PHONY : importance_matrix.cpp.o
+
+importance_matrix.i: importance_matrix.cpp.i
+
+.PHONY : importance_matrix.i
+
+# target to preprocess a source file
+importance_matrix.cpp.i:
+	$(MAKE) -f CMakeFiles/GooglePageRankAlgorithm.dir/build.make CMakeFiles/GooglePageRankAlgorithm.dir/importance_matrix.cpp.i
+.PHONY : importance_matrix.cpp.i
+
+importance_matrix.s: importance_matrix.cpp.s
+
+.PHONY : importance_matrix.s
+
+# target to generate assembly for a file
+importance_matrix.cpp.s:
+	$(MAKE) -f CMakeFiles/GooglePageRankAlgorithm.dir/build.make CMakeFiles/GooglePageRankAlgorithm.dir/importance_matrix.cpp.s
+.PHONY : importance_matrix.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -177,6 +258,87 @@ matrix.cpp.s:
 	$(MAKE) -f CMakeFiles/GooglePageRankAlgorithm.dir/build.make CMakeFiles/GooglePageRankAlgorithm.dir/matrix.cpp.s
 .PHONY : matrix.cpp.s
 
+q_matrix.o: q_matrix.cpp.o
+
+.PHONY : q_matrix.o
+
+# target to build an object file
+q_matrix.cpp.o:
+	$(MAKE) -f CMakeFiles/GooglePageRankAlgorithm.dir/build.make CMakeFiles/GooglePageRankAlgorithm.dir/q_matrix.cpp.o
+.PHONY : q_matrix.cpp.o
+
+q_matrix.i: q_matrix.cpp.i
+
+.PHONY : q_matrix.i
+
+# target to preprocess a source file
+q_matrix.cpp.i:
+	$(MAKE) -f CMakeFiles/GooglePageRankAlgorithm.dir/build.make CMakeFiles/GooglePageRankAlgorithm.dir/q_matrix.cpp.i
+.PHONY : q_matrix.cpp.i
+
+q_matrix.s: q_matrix.cpp.s
+
+.PHONY : q_matrix.s
+
+# target to generate assembly for a file
+q_matrix.cpp.s:
+	$(MAKE) -f CMakeFiles/GooglePageRankAlgorithm.dir/build.make CMakeFiles/GooglePageRankAlgorithm.dir/q_matrix.cpp.s
+.PHONY : q_matrix.cpp.s
+
+stochastic_matrix.o: stochastic_matrix.cpp.o
+
+.PHONY : stochastic_matrix.o
+
+# target to build an object file
+stochastic_matrix.cpp.o:
+	$(MAKE) -f CMakeFiles/GooglePageRankAlgorithm.dir/build.make CMakeFiles/GooglePageRankAlgorithm.dir/stochastic_matrix.cpp.o
+.PHONY : stochastic_matrix.cpp.o
+
+stochastic_matrix.i: stochastic_matrix.cpp.i
+
+.PHONY : stochastic_matrix.i
+
+# target to preprocess a source file
+stochastic_matrix.cpp.i:
+	$(MAKE) -f CMakeFiles/GooglePageRankAlgorithm.dir/build.make CMakeFiles/GooglePageRankAlgorithm.dir/stochastic_matrix.cpp.i
+.PHONY : stochastic_matrix.cpp.i
+
+stochastic_matrix.s: stochastic_matrix.cpp.s
+
+.PHONY : stochastic_matrix.s
+
+# target to generate assembly for a file
+stochastic_matrix.cpp.s:
+	$(MAKE) -f CMakeFiles/GooglePageRankAlgorithm.dir/build.make CMakeFiles/GooglePageRankAlgorithm.dir/stochastic_matrix.cpp.s
+.PHONY : stochastic_matrix.cpp.s
+
+transition_matrix.o: transition_matrix.cpp.o
+
+.PHONY : transition_matrix.o
+
+# target to build an object file
+transition_matrix.cpp.o:
+	$(MAKE) -f CMakeFiles/GooglePageRankAlgorithm.dir/build.make CMakeFiles/GooglePageRankAlgorithm.dir/transition_matrix.cpp.o
+.PHONY : transition_matrix.cpp.o
+
+transition_matrix.i: transition_matrix.cpp.i
+
+.PHONY : transition_matrix.i
+
+# target to preprocess a source file
+transition_matrix.cpp.i:
+	$(MAKE) -f CMakeFiles/GooglePageRankAlgorithm.dir/build.make CMakeFiles/GooglePageRankAlgorithm.dir/transition_matrix.cpp.i
+.PHONY : transition_matrix.cpp.i
+
+transition_matrix.s: transition_matrix.cpp.s
+
+.PHONY : transition_matrix.s
+
+# target to generate assembly for a file
+transition_matrix.cpp.s:
+	$(MAKE) -f CMakeFiles/GooglePageRankAlgorithm.dir/build.make CMakeFiles/GooglePageRankAlgorithm.dir/transition_matrix.cpp.s
+.PHONY : transition_matrix.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +348,30 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... GooglePageRankAlgorithm"
 	@echo "... edit_cache"
+	@echo "... column_matrix.o"
+	@echo "... column_matrix.i"
+	@echo "... column_matrix.s"
+	@echo "... connectivity_matrix.o"
+	@echo "... connectivity_matrix.i"
+	@echo "... connectivity_matrix.s"
+	@echo "... importance_matrix.o"
+	@echo "... importance_matrix.i"
+	@echo "... importance_matrix.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... matrix.o"
 	@echo "... matrix.i"
 	@echo "... matrix.s"
+	@echo "... q_matrix.o"
+	@echo "... q_matrix.i"
+	@echo "... q_matrix.s"
+	@echo "... stochastic_matrix.o"
+	@echo "... stochastic_matrix.i"
+	@echo "... stochastic_matrix.s"
+	@echo "... transition_matrix.o"
+	@echo "... transition_matrix.i"
+	@echo "... transition_matrix.s"
 .PHONY : help
 
 
