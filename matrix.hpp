@@ -6,37 +6,38 @@
 #define GOOGLEPAGERANKALGORITHM_MATRIX_HPP
 
 #include <iomanip>
+#include <cmath>
+#include <iostream>
 
 using namespace std;
 
 class matrix {
 public:
     double *MATRIX;
-    int row;
-    int col;
+    int row, col;
     static constexpr double TOLERANCE = 0.001;
 
     matrix();
 
-    matrix( int n );
+    matrix( int );
 
-    matrix( int r, int c );
+    matrix( int, int );
 
-    matrix( double double_arr[], int size );
+    matrix( double *, int );
 
     ~matrix();
 
-    void set_value( int r, int c, double newValue );
+    void set_value( int, int, double );
 
-    double get_value( int r, int c ) const;
+    double get_value( int, int ) const;
 
     void clear();
 
-    ostream &operator<<( ostream &os );
+    friend ostream &operator<<( ostream &, const matrix & );
 
-    bool operator==( const matrix &matrix );
+    friend bool operator==( const matrix &, const matrix & );
 
-    bool operator!=( const matrix &matrix );
+    friend bool operator!=( const matrix &, const matrix & );
 
     matrix &operator++();
 
@@ -46,19 +47,21 @@ public:
 
     const matrix operator--( int );
 
-    matrix &operator=( matrix &matrix );
+    matrix &operator=( matrix & );
 
-    matrix operator+(matrix &other_matrix );
+    matrix &operator+=( const matrix & );
 
-    matrix &operator+=( matrix &other_matrix );
+    friend matrix operator+( matrix &, const matrix & );
 
-    matrix operator-(matrix &other_matrix );
+    matrix &operator-=( const matrix & );
 
-    matrix &operator-=( matrix &other_matrix );
+    friend matrix operator-( matrix &, const matrix & );
 
-    matrix operator*(matrix &other_matrix );
+    matrix &operator*=( const matrix & );
 
-    matrix &operator*=( matrix &other_matrix );
+    friend matrix operator*( matrix &, const matrix & );
+
+    friend matrix operator*( matrix &, double );
 
 private:
 

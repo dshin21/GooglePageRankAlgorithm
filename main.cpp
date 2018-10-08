@@ -10,7 +10,7 @@ int main() {
 
     cout << "============================" << endl;
     cout << "my_matrix values:" << endl;
-    cout << my_matrix << endl;
+//    cout << my_matrix << endl;
 
     return 0;
 }
