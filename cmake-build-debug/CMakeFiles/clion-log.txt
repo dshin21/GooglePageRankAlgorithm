@@ -1,4 +1,0 @@
-C:\Users\danie\.CLion2018.2\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm
--- Configuring done
--- Generating done
--- Build files have been written to: /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Assignments/GooglePageRankAlgorithm/cmake-build-debug
