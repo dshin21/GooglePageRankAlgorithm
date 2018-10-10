@@ -1,162 +1,240 @@
-//
-// Created by danie on 2018-10-01.
-//
-
 #include "matrix.hpp"
+#include "invalid_matrix_size_exception.hpp"
+#include "invalid_vector_size_exception.hpp"
 
-
-matrix::matrix() : row( 1 ), col( 1 ), the_matrix( new double[row * col] ) {
+//done
+matrix::matrix()
+        : matrix_row( 1 ),
+          matrix_column( 1 ),
+          the_matrix( new double[matrix_row * matrix_column] ) {
     clear();
 }
 
-matrix::matrix( int n ) : row( n ), col( n ) {
-    if ( n < 0 || n == 0 ) throw;  //TODO: implement an exception
-    the_matrix = new double[n * n];
+//done
+matrix::matrix( int n )
+        : matrix_row( n ),
+          matrix_column( n ),
+          the_matrix( new double[n * n] ) {
+    if ( n <= 0 ) throw invalid_matrix_size_exception();
     clear();
 }
 
-matrix::matrix( int r, int c ) : row( r ), col( c ) {
-    if (( r < 0 || r == 0 ) && ( c < 0 || c == 0 )) throw;  //TODO: implement an exception
-    the_matrix = new double[r * c];
+//done
+matrix::matrix( int row, int column )
+        : matrix_row( row ),
+          matrix_column( column ) {
+    if ( row <= 0 || column <= 0 ) throw invalid_matrix_size_exception();
+    the_matrix = new double[row * column];
     clear();
 }
 
-matrix::matrix( double *double_arr, int size ) {
+// done
+matrix::matrix( double array[], int size ) {
     auto sqrt_size = static_cast<int>(sqrt( size ));
-    if ( pow( size, 2 ) != sqrt_size ) throw; //TODO: implement an exception
-
-    row = sqrt_size;
-    col = sqrt_size;
+    if ( pow( sqrt_size, 2 ) != size ) throw invalid_matrix_size_exception();
+    matrix_row = sqrt_size;
+    matrix_column = sqrt_size;
     the_matrix = new double[size];
-
-    for ( int i = 0; i < size; ++i ) the_matrix[ i ] = double_arr[ i ];
+    for ( int i = 0; i < size; ++i ) the_matrix[ i ] = array[ i ];
 }
 
+//done
+matrix::matrix( const matrix& matrix )
+        : matrix_row( matrix.matrix_row ),
+          matrix_column( matrix.matrix_column ),
+          the_matrix( new double[matrix_row * matrix_column] ) {
+    for ( int i = 0; i < matrix_row * matrix_column; ++i )the_matrix[ i ] = matrix.the_matrix[ i ];
+}
+
+//done
 matrix::~matrix() {
     delete[] the_matrix;
 }
 
-void matrix::set_value( int r, int c, double newValue ) {
-    if ( r < 0 || c < 0 || ( r * c > row * col )) throw; //TODO: implement an exception
-    the_matrix[ ( row * r ) + c ] = newValue;
+//done
+void matrix::set_value( int row, int column, double value ) {
+    if ( row < 0 || column < 0 || row * column > matrix_row * matrix_column ) throw invalid_matrix_size_exception();
+    the_matrix[ ( matrix_column * row ) + column ] = value;
 }
 
-double matrix::get_value( int r, int c ) const {
-    if ( r < 0 || c < 0 || ( r * c > row * col )) throw;
-    return the_matrix[ ( row * r ) + c ];
+//done
+const double& matrix::get_value( int row, int column ) const {
+    if ( row < 0 || column < 0 || row * column > matrix_row * matrix_column ) throw invalid_matrix_size_exception();
+    return the_matrix[ ( matrix_column * row ) + column ];
 }
 
+// done
 void matrix::clear() {
-    for ( int i = 0; i < row * col; ++i )
-        the_matrix[ i ] = 0.0;
+    for ( int i = 0; i < matrix_row * matrix_column; ++i ) the_matrix[ i ] = 0.0;
 }
 
-ostream &operator<<( ostream &os, const matrix &matrix ) {
-    for ( int i = 0; i < matrix.row; ++i ) {
-        for ( int j = 0; j < matrix.col; ++j )
-            cout << matrix.get_value( i, j );
-        cout << "\n";
+// done
+ostream& operator<<( ostream& os, matrix& matrix ) {
+    for ( int i = 0; i < matrix.matrix_row; ++i ) {
+        for ( int j = 0; j < matrix.matrix_column; ++j )
+            os << setw( 15 ) << left << matrix.get_value( i, j );
+        os << endl;
     }
-
     return os;
 }
 
-bool operator==( const matrix &first, const matrix &second ) {
-    if ( first.row != second.row || first.col != second.col ) return false;
-
-    for ( int i = 0; i < first.row; ++i )
-        for ( int j = 0; j < first.col; ++j )
-            if ( abs( first.get_value( i, j ) - second.get_value( i, j )) > matrix::TOLERANCE )
-                return false;
+// done
+bool operator==( matrix& first, matrix& second ) {
+    if ( first.get_matrix_row() != second.get_matrix_row() ||
+         first.get_matrix_column() != second.get_matrix_column() )
+        return false;
+    for ( int i = 0; i < first.get_matrix_row(); ++i )
+        for ( int j = 0; j < first.get_matrix_column(); ++j ) {
+            double temp = abs( first.get_value( i, j ) - second.get_value( i, j ) );
+            if ( temp > matrix::tolerance ) return false;
+        }
     return true;
 }
 
-bool operator!=( const matrix &first, const matrix &second ) {
+// done
+bool operator!=( matrix& first, matrix& second ) {
     return !operator==( first, second );
 }
 
-matrix &matrix::operator++() {
-    for ( int i = 0; i < row; ++i )
-        for ( int j = 0; j < col; ++j )
+// done
+matrix& matrix::operator++() {
+    for ( int i = 0; i < get_matrix_row(); ++i )
+        for ( int j = 0; j < get_matrix_column(); ++j )
             set_value( i, j, get_value( i, j ) + 1 );
     return *this;
 }
 
+// done
 const matrix matrix::operator++( int ) {
     matrix temp( *this );
     operator++();
     return temp;
 }
 
-matrix &matrix::operator--() {
-    for ( int i = 0; i < row; ++i )
-        for ( int j = 0; j < col; ++j )
+// done
+matrix& matrix::operator--() {
+    for ( int i = 0; i < get_matrix_row(); ++i )
+        for ( int j = 0; j < get_matrix_column(); ++j )
             set_value( i, j, get_value( i, j ) - 1 );
     return *this;
 }
 
+// done
 const matrix matrix::operator--( int ) {
     matrix temp( *this );
     operator--();
     return temp;
 }
 
-matrix &matrix::operator=( matrix &matrix ) {
-    using std::swap;
-    swap( row, matrix.row );
-    swap( col, matrix.col );
+// done
+matrix& matrix::operator=( matrix matrix ) {
+    swap( matrix_row, matrix.matrix_row );
+    swap( matrix_column, matrix.matrix_column );
     swap( the_matrix, matrix.the_matrix );
     return *this;
 }
 
-matrix &matrix::operator+=( const matrix &rhs ) {
-    if ( row != rhs.row || col != rhs.col ) throw; //TODO: implement an exception
-
-    for ( int i = 0; i < row; ++i )
-        for ( int j = 0; j < col; ++j )
-            the_matrix[ i * row + j ] += rhs.get_value( i, j );
+// done
+matrix& matrix::operator+=( const matrix& rhs ) {
+    if ( matrix_row != rhs.matrix_row || matrix_column != rhs.matrix_column ) throw invalid_matrix_size_exception();
+    for ( int i = 0; i < matrix_row; ++i )
+        for ( int j = 0; j < matrix_column; ++j )
+            the_matrix[ i * matrix_row + j ] += rhs.get_value( i, j );
     return *this;
 }
 
-matrix operator+( matrix &lhs, const matrix &rhs ) {
+// done
+matrix operator+( matrix& lhs, const matrix& rhs ) {
     lhs += rhs;
     return lhs;
 }
 
-matrix &matrix::operator-=( const matrix &rhs ) {
-    if ( row != rhs.row || col != rhs.col ) throw; //TODO: implement an exception
-
-    for ( int i = 0; i < row; ++i )
-        for ( int j = 0; j < col; ++j )
-            the_matrix[ i * row + j ] -= rhs.get_value( i, j );
+// done
+matrix& matrix::operator-=( const matrix& rhs ) {
+    if ( matrix_row != rhs.matrix_row || matrix_column != rhs.matrix_column ) throw invalid_matrix_size_exception();
+    for ( int i = 0; i < matrix_row; ++i )
+        for ( int j = 0; j < matrix_column; ++j )
+            the_matrix[ i * matrix_row + j ] -= rhs.get_value( i, j );
     return *this;
 }
 
-matrix operator-( matrix &lhs, const matrix &rhs ) {
+// done
+matrix operator-( matrix& lhs, const matrix& rhs ) {
     lhs -= rhs;
     return lhs;
 }
 
-matrix &matrix::operator*=( const matrix &rhs ) {
-    if ( row != rhs.row || col != rhs.col ) throw; //TODO: implement an exception
-
-    for ( int i = 0; i < row; ++i )
-        for ( int j = 0; j < col; ++j )
-            the_matrix[ i * row + j ] *= rhs.get_value( i, j );
+//done
+matrix& matrix::operator*=( const matrix& rhs ) {
+    if ( matrix_row != rhs.matrix_row || matrix_column != rhs.matrix_column ) throw invalid_matrix_size_exception();
+    for ( int i = 0; i < matrix_row; ++i )
+        for ( int j = 0; j < matrix_column; ++j )
+            the_matrix[ i * matrix_row + j ] *= rhs.get_value( i, j );
     return *this;
 }
 
+//done
+matrix operator*( matrix& lhs, matrix& rhs ) {
+    if ( lhs.matrix_column != rhs.matrix_row ) throw invalid_matrix_size_exception();
+    matrix temp( lhs.matrix_row, rhs.matrix_column );
+    for ( int i = 0; i < lhs.matrix_row; ++i )
+        for ( int j = 0; j < rhs.matrix_column; ++j )
+            temp.set_value( i, j, matrix::matrix_multiplication( lhs.get_row_as_vector( i ),
+                                                                 rhs.get_column_as_vector( j ) ) );
+    return temp;
+}
 
-matrix operator*( matrix &lhs, const matrix &rhs ) {
-    lhs *= rhs;
+//done
+matrix& matrix::operator*=( const double constant ) {
+    for ( int i = 0; i < matrix_row; ++i )
+        for ( int j = 0; j < matrix_column; ++j )
+            the_matrix[ i * matrix_row + j ] *= constant;
+    return *this;
+}
+
+//done
+matrix operator*( double value, matrix& lhs ) {
+    lhs *= value;
     return lhs;
 }
 
-matrix operator*( matrix &lhs,const double value ) {
-    for ( int i = 0; i < lhs.row; ++i )
-        for ( int j = 0; j < lhs.col; ++j )
-            lhs.the_matrix[ i * lhs.row + j ] *= value;
-    return lhs;
+//done
+vector< double > matrix::get_row_as_vector( int row_index ) {
+    vector< double > row_vector;
+    for ( int i = 0; i < matrix_column; ++i ) row_vector.push_back( get_value( row_index, i ) );
+    return row_vector;
+}
+
+//done
+vector< double > matrix::get_column_as_vector( int col_index ) {
+    vector< double > column_vector;
+    for ( int i = 0; i < matrix_row; ++i ) column_vector.push_back( get_value( i, col_index ) );
+    return column_vector;
+}
+
+//done
+double matrix::matrix_multiplication( vector< double > rhs, vector< double > lhs ) {
+    double sum = 0;
+    if ( rhs.size() != lhs.size() ) throw invalid_vector_size_exception();
+    for ( int i = 0; i < rhs.size(); i++ ) sum += rhs[ i ] * lhs[ i ];
+    return sum;
+}
+
+//done
+double matrix::sum_column( vector< double > column_vector ) {
+    double sum = 0;
+    for ( double i : column_vector ) sum += i;
+    return sum;
+}
+
+// done
+const int matrix::get_matrix_row() {
+    return matrix_row;
+}
+
+// done
+const int matrix::get_matrix_column() {
+    return matrix_column;
 }
 
 

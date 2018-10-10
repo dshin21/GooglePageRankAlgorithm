@@ -1,74 +1,84 @@
-//
-// Created by danie on 2018-10-01.
-//
+#pragma once
 
-#ifndef GOOGLEPAGERANKALGORITHM_MATRIX_HPP
-#define GOOGLEPAGERANKALGORITHM_MATRIX_HPP
-
-#include <iomanip>
-#include <cmath>
 #include <iostream>
+#include <cmath>
+#include <vector>
+#include <iomanip>
 
 using namespace std;
 
 class matrix {
+private:
+    int matrix_row;
+
+    int matrix_column;
+
+    double* the_matrix;
+
 public:
-    double *the_matrix;
-    int row, col;
-    static constexpr double tolerance = 0.001;
+    static constexpr double tolerance = 0.00001;
 
     matrix();
 
-    matrix( int );
+    explicit matrix( int n );
 
-    matrix( int, int );
+    matrix( int row, int column );
 
-    matrix( double *, int );
+    matrix( double array[], int size );
+
+    matrix( const matrix& matrix );
 
     ~matrix();
 
-    void set_value( int, int, double );
+    void set_value( int row, int column, double value );
 
-    double get_value( int, int ) const;
+    const double& get_value( int row, int column ) const;
 
     void clear();
 
-    friend ostream &operator<<( ostream &, const matrix & );
+    static double sum_column( vector< double > column );
 
-    friend bool operator==( const matrix &, const matrix & );
+    friend ostream& operator<<( ostream& os, matrix& matrix );
 
-    friend bool operator!=( const matrix &, const matrix & );
+    friend bool operator==( matrix& first, matrix& second );
 
-    matrix &operator++();
+    friend bool operator!=( matrix& first, matrix& second );
+
+    matrix& operator++();
 
     const matrix operator++( int );
 
-    matrix &operator--();
+    matrix& operator--();
 
     const matrix operator--( int );
 
-    matrix &operator=( matrix & );
+    matrix& operator=( matrix matrix );
 
-    matrix &operator+=( const matrix & );
+    matrix& operator+=( const matrix& rhs );
 
-    friend matrix operator+( matrix &, const matrix & );
+    friend matrix operator+( matrix& lhs, const matrix& rhs );
 
-    matrix &operator-=( const matrix & );
+    matrix& operator-=( const matrix& rhs );
 
-    friend matrix operator-( matrix &, const matrix & );
+    friend matrix operator-( matrix& lhs, const matrix& rhs );
 
-    matrix &operator*=( const matrix & );
+    matrix& operator*=( const matrix& rhs );
 
-    friend matrix operator*( matrix &, const matrix & );
+    friend matrix operator*( matrix& lhs, matrix& rhs );
 
-    friend matrix operator*( matrix &, double );
+    matrix& operator*=( double );
 
-private:
+    friend matrix operator*( double lhs, matrix& rhs );
 
+    static double matrix_multiplication( vector< double > first_vector, vector< double > sec_vector );
 
+    const int get_matrix_row();
+
+    const int get_matrix_column();
+
+    vector< double > get_row_as_vector( int row_index );
+
+    vector< double > get_column_as_vector( int col_index );
 };
 
 
-#endif //GOOGLEPAGERANKALGORITHM_MATRIX_HPP
-
-//TODO: add README.md
