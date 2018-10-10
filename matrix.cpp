@@ -1,6 +1,4 @@
 #include "matrix.hpp"
-#include "invalid_matrix_size_exception.hpp"
-#include "invalid_vector_size_exception.hpp"
 
 //done
 matrix::matrix()

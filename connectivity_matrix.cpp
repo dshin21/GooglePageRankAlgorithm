@@ -1,27 +1,23 @@
-//
-// Created by danie on 2018-10-07.
-//
-
-#include <vector>
-#include <fstream>
 #include "connectivity_matrix.hpp"
 
-connectivity_matrix::connectivity_matrix( double *array, int size ) : matrix( array, size ) {
+connectivity_matrix::connectivity_matrix( double* array, int size )
+        : matrix( array, size ) {
     for ( int i = 0; i < size; ++i )
-        if (( array[ i ] - zero > matrix::tolerance && array[ i ] - one > matrix::tolerance ) || array[ i ] < zero )
+        if ( ( array[ i ] - zero > matrix::tolerance && array[ i ] - one > matrix::tolerance ) || array[ i ] < zero )
             throw invalid_connectivity_matrix_exception();
 }
 
-connectivity_matrix connectivity_matrix::create_connectivity_matrix( const std::string file_path ) {
-    vector< double > matrix;
-    string text;
+connectivity_matrix connectivity_matrix::read_file( string file ) {
+    ifstream connectivity_file( file );
+    vector< double > temp;
+    string element;
 
-    while ( ifstream{ file_path } >> text ) {
+    while ( connectivity_file >> element ) {
         double digit;
-        stringstream to_string{ text };
-        to_string >> digit;
-        matrix.push_back( digit );
-    }
-
-    return connectivity_matrix( &matrix[ 0 ], static_cast<int>(matrix.size()));
+        stringstream value( element );
+        value >> digit;
+        temp.push_back( digit );
+    };
+    connectivity_matrix conn_matrix( &temp[ 0 ], static_cast<int>(temp.size()) );
+    return conn_matrix;
 }

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "invalid_matrix_size_exception.hpp"
+#include "invalid_vector_size_exception.hpp"
 #include <iostream>
 #include <cmath>
 #include <vector>

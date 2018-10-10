@@ -1,9 +1,3 @@
-/*
-* Created by Daniel Shin on 2018-10-08.
-*/
-
-#pragma once
-
 #include "q_matrix.hpp"
 
 q_matrix::q_matrix( int size ) : matrix( size ) {

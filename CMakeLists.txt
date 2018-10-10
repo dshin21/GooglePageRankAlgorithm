@@ -3,4 +3,4 @@ project(GooglePageRankAlgorithm)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(GooglePageRankAlgorithm main.cpp matrix.cpp matrix.hpp connectivity_matrix.cpp connectivity_matrix.hpp invalid_connectivity_matrix_exception.hpp stochastic_matrix.cpp stochastic_matrix.hpp importance_matrix.cpp importance_matrix.hpp transition_matrix.cpp transition_matrix.hpp q_matrix.cpp q_matrix.hpp column_matrix.cpp column_matrix.hpp)
+add_executable(GooglePageRankAlgorithm main.cpp matrix.cpp matrix.hpp connectivity_matrix.cpp connectivity_matrix.hpp invalid_connectivity_matrix_exception.hpp stochastic_matrix.cpp stochastic_matrix.hpp importance_matrix.cpp importance_matrix.hpp transition_matrix.cpp transition_matrix.hpp q_matrix.cpp q_matrix.hpp column_matrix.cpp column_matrix.hpp invalid_matrix_size_exception.hpp invalid_vector_size_exception.hpp)

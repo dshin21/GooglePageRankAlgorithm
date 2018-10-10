@@ -1,7 +1,3 @@
-/*
-* Created by Daniel Shin on 2018-10-08.
-*/
-
 #pragma once
 
 #include "matrix.hpp"
@@ -14,7 +10,7 @@ class transition_matrix : public matrix {
 public:
     static constexpr double p = 0.85;
 
-    transition_matrix( stochastic_matrix &, q_matrix & );
+    transition_matrix( stochastic_matrix, q_matrix );
 };
 
 
