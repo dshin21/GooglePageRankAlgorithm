@@ -1,5 +1,11 @@
 #include "connectivity_matrix.hpp"
 
+/*
+ * connectivity_matrix constructor
+ * @params  double* array, the array of values to be converted to a matrix
+ *          int size, size of the matrix
+ * @returns void
+ */
 connectivity_matrix::connectivity_matrix( double* array, int size )
         : matrix( array, size ) {
     for ( int i = 0; i < size; ++i )
@@ -7,6 +13,11 @@ connectivity_matrix::connectivity_matrix( double* array, int size )
             throw invalid_connectivity_matrix_exception();
 }
 
+/*
+ * Reads a "connectivity.txt" file and constructs a connectivity_matrix
+ * @params string file, the path of the "connectivity.txt" file
+ * @returns connectivity_matrix
+ */
 connectivity_matrix connectivity_matrix::read_file( string file ) {
     ifstream connectivity_file( file );
     vector< double > temp;

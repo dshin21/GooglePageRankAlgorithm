@@ -8,7 +8,7 @@ using namespace std;
 
 int main() {
     connectivity_matrix conn_matrix = connectivity_matrix::read_file(
-            "D:\\googleDrive\\DBOX\\BCIT\\COMP_3712\\Assignments\\GooglePageRankAlgorithm\\connectivity.txt" );
+            "connectivity.txt" );
     cout << "Connectivity Matrix" << endl;
     cout << conn_matrix << endl;
 
