@@ -11,8 +11,8 @@ public:
 
     static constexpr int one = 1;
 
-    connectivity_matrix( double*, int );
+    connectivity_matrix( double* matrix, int size);
 
-    static connectivity_matrix read_file( string );
+    static connectivity_matrix read_file( string fileName);
 };
 
